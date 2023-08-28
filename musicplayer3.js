@@ -3,7 +3,7 @@
 // A self-contained <style> tag for the music player's CSS
 const styleElement = document.createElement("style");
 styleElement.innerHTML = `
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
   @import url('https://fonts.bunny.net/css2?family=Rubik:wght@400;700&display=swap');
   * {
     box-sizing: border-box;
@@ -57,7 +57,7 @@ styleElement.innerHTML = `
   
   #volume {
     appearance: none;
-    width: 100px;
+    width: 120px;
     margin-left: 10px;
     background-color: #8d91fe;
     height: 4px;
@@ -77,20 +77,38 @@ styleElement.innerHTML = `
   #song-info {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    margin: 0px 0px;
   }
   
   #song-title {
+    display: flex;
+    background: none;
+    border: 0;
+    color: #490349;
     font-size: 1rem;
     font-weight: bold;
-    margin: 0;
-    margin-right: 5px;
-    padding-left: 5px;
+    margin: 0 10px;
+    padding: 5px;
+    outline: none;
   }
-  
+
+  #song-title:hover {
+    display: flex;
+    background: none;
+    border: 0;
+    color: #8d91fe;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 5px;
+    outline: none;
+  }
+
   #album-art {
-    width: 40px;
-    height: 40px;
+    display: flex;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
   }
