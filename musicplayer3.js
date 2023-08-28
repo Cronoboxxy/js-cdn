@@ -1,15 +1,17 @@
-// musicplayer.js
+// musicplayer.js 0.33 - You dont want to look at the older ver, lol.
 
-// Create a self-contained <style> tag for the music player's CSS
+// A self-contained <style> tag for the music player's CSS
 const styleElement = document.createElement("style");
 styleElement.innerHTML = `
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css');
+  #@import url('https://fonts.bunny.net/css2?family=Rubik:wght@400;700&display=swap');
   * {
     box-sizing: border-box;
   }
   
   .audio-player {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Rubik", sans-serif;
     border-radius: 15px;
     box-shadow: 0 3px 10px 0 rgba(186, 184, 184, 0.6);
     display: flex;
@@ -28,14 +30,29 @@ styleElement.innerHTML = `
     cursor: pointer;
     padding: 10px;
     margin: 0 10px;
+    outline: none;
   }
   
   .control-button:focus {
+    background: none;
+    border: 0;
+    color: #8d91fe;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px;
     outline: none;
   }
   
   .control-button:hover {
+    background: none;
+    border: 0;
     color: #490349;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px;
+    outline: none;
   }
   
   #volume {
@@ -64,10 +81,11 @@ styleElement.innerHTML = `
   }
   
   #song-title {
+    font-size: 1rem;
     font-weight: bold;
     margin: 0;
     margin-right: 5px;
-    padding-left: 10px;
+    padding-left: 5px;
   }
   
   #album-art {
@@ -79,11 +97,11 @@ styleElement.innerHTML = `
   
 `;
 
-// Create the container for the music player
+// CContainer for the music player
 const musicContainer = document.createElement("div");
 musicContainer.className = "music-container";
 
-// Create the HTML structure for the music player
+// HTML structure for the music player
 musicContainer.innerHTML = `
   <div class="audio-player">
     <audio id="audio">
@@ -105,7 +123,7 @@ musicContainer.innerHTML = `
   </div>
 `;
 
-// Append the <style> and music player container to the document
+// <style> and music player container to the document
 document.head.appendChild(styleElement);
 document.body.appendChild(musicContainer);
 
