@@ -4,7 +4,7 @@
 const styleElement = document.createElement("style");
 styleElement.innerHTML = `
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+  @import url('https://api.fonts.coollabs.io/css2?family=Rubik:wght@400;700&display=swap');
   * {
     box-sizing: border-box;
   }
