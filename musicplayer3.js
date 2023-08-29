@@ -4,7 +4,7 @@
 const styleElement = document.createElement("style");
 styleElement.innerHTML = `
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
-  @import url('https://fonts.bunny.net/css2?family=Rubik:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
   * {
     box-sizing: border-box;
   }
@@ -201,6 +201,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Initialize audio player settings
   audio.volume = 0.5;
+
+  // Choose a random track index
+  const randomTrackIndex = Math.floor(Math.random() * tracks.length);
+  currentTrackIndex = randomTrackIndex;
+
+  // Set the audio source to the randomly chosen track
   audio.src = tracks[currentTrackIndex];
   audio.play();
   updateSongInfo();
