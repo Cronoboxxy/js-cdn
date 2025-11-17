@@ -156,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const tracks = [
     'https://kathy.torontocast.com:3340/stream',
-    'https://cast1.torontocast.com:2120/stream',
-    'https://cast1.torontocast.com:2170/stream'
+    'https://quincy.torontocast.com:2020/stream',
+    'https://quincy.torontocast.com:2070/stream'
   ];
 
   const trackInfo = [
